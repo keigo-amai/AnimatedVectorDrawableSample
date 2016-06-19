@@ -46,25 +46,20 @@ public class AnimationButton extends Button implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        if (view instanceof Button) {
+        Drawable drawable = view.getBackground();
 
-            Button button = (Button) view;
+        if (drawable instanceof AnimatedVectorDrawable) {
+            if (((AnimatedVectorDrawable) drawable).isRunning()) return;
 
-            Drawable drawable = button.getBackground();
+            String stateResName = view.isSelected() ? mResName + REVERSE_SUFFIX : mResName;
+            int drawableResId = getResources().getIdentifier(stateResName, "drawable", getContext().getPackageName());
+            view.setBackground(getContext().getDrawable(drawableResId));
 
-            if (drawable instanceof AnimatedVectorDrawable) {
-                if (((AnimatedVectorDrawable) drawable).isRunning()) return;
+            drawable = view.getBackground();
+            ((AnimatedVectorDrawable) drawable).start();
 
-                String stateResName = button.isSelected() ? mResName + REVERSE_SUFFIX : mResName;
-                int drawableResId = getResources().getIdentifier(stateResName, "drawable", getContext().getPackageName());
-                button.setBackground(getContext().getDrawable(drawableResId));
+            view.setSelected(!view.isSelected());
 
-                drawable = button.getBackground();
-                ((AnimatedVectorDrawable) drawable).start();
-
-                button.setSelected(!button.isSelected());
-
-            }
         }
     }
 }
