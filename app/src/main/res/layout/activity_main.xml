@@ -5,18 +5,11 @@
     android:orientation="vertical">
 
 
-    <CheckBox
-        android:id="@+id/text"
+    <Button
+        android:id="@+id/heart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="@string/love_it"
-        android:textSize="64sp"
-        android:textColor="@color/heart_text"
-        android:paddingLeft="16dp"
-        android:button="@drawable/fill_in_heart"
-        android:background="@null"/>
+        android:background="@drawable/fill_in_heart"/>
 
     <!--<CheckBox-->
     <!--android:id="@+id/something"-->
