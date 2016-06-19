@@ -27,6 +27,13 @@
             android:background="@drawable/animated_equalizer_vector"
             app:ResourceName="animated_equalizer_vector"/>
 
+
+        <com.amadroid.vectoranimationsample.view.AnimationButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/animated_nav_arrow"
+            app:ResourceName="animated_nav_arrow"/>
+
     </LinearLayout>
 
 </ScrollView>
