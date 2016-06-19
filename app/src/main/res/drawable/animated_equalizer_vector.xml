@@ -1,19 +1,12 @@
-<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
-
-    <item android:id="@+id/state_on" android:drawable="@drawable/equalizer_vector_on" android:state_checked="true"/>
-    <item android:id="@+id/state_off" android:drawable="@drawable/equalizer_vector" />
-
-    <transition android:fromId="@id/state_off" android:toId="@id/state_on" android:reversible="true">
-        <animated-vector android:drawable="@drawable/equalizer_vector">
-            <target
-                android:name="switch1"
-                android:animation="@anim/morph_linear_first" />
-            <target
-                android:name="switch2"
-                android:animation="@anim/morph_linear_second" />
-            <target
-                android:name="switch3"
-                android:animation="@anim/morph_linear_third" />
-        </animated-vector>
-    </transition>
-</animated-selector>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/equalizer_vector">
+    <target
+        android:name="switch1"
+        android:animation="@anim/morph_equalizer1" />
+    <target
+        android:name="switch2"
+        android:animation="@anim/morph_equalizer2" />
+    <target
+        android:name="switch3"
+        android:animation="@anim/morph_equalizer3" />
+</animated-vector>

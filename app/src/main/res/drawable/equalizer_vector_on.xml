@@ -2,22 +2,20 @@
     android:viewportWidth="64.0" android:width="100dp" xmlns:android="http://schemas.android.com/apk/res/android">
 
     <path android:name="switch1"
-        android:fillColor="#00000000" android:pathData="m12,15 l11,0"
-        android:strokeColor="#fff" android:strokeWidth="5"/>
-
+        android:fillColor="#00000000" android:pathData="@string/equalizer_switch1_on"
+        android:strokeColor="@color/gray" android:strokeWidth="5"/>
     <path android:name="switch2"
-        android:fillColor="#00000000" android:pathData="m26.5,50 l11,0"
-        android:strokeColor="#fff" android:strokeWidth="5"/>
-
+        android:fillColor="#00000000" android:pathData="@string/equalizer_switch2_on"
+        android:strokeColor="@color/gray" android:strokeWidth="5"/>
     <path android:name="switch3"
-        android:fillColor="#00000000" android:pathData="m41,15 l11,0"
-        android:strokeColor="#fff" android:strokeWidth="5"/>
+        android:fillColor="#00000000" android:pathData="@string/equalizer_switch3_on"
+        android:strokeColor="@color/gray" android:strokeWidth="5"/>
 
 
     <path android:fillColor="#00000000"
-        android:pathData="m17.5,57 l0,-50" android:strokeColor="#fff" android:strokeWidth="5"/>
+        android:pathData="m17.5,57 l0,-50" android:strokeColor="@color/gray" android:strokeWidth="5"/>
     <path android:fillColor="#00000000" android:pathData="M32,57 L32,7"
-        android:strokeColor="#fff" android:strokeWidth="5"/>
+        android:strokeColor="@color/gray" android:strokeWidth="5"/>
     <path android:fillColor="#00000000"
-        android:pathData="m46.5,57 l0,-50" android:strokeColor="#fff" android:strokeWidth="5"/>
+        android:pathData="m46.5,57 l0,-50" android:strokeColor="@color/gray" android:strokeWidth="5"/>
 </vector>

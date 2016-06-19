@@ -3,6 +3,6 @@
         android:duration="@integer/animate_duration"
         android:valueType="pathType"
         android:propertyName="pathData"
-        android:valueFrom="m12,49 l11,0"
-        android:valueTo="m12,15 l11,0" />
+        android:valueFrom="@string/equalizer_switch3_off"
+        android:valueTo="@string/equalizer_switch3_on" />
 </set>

@@ -1,0 +1,12 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/equalizer_vector_on">
+    <target
+        android:name="switch1"
+        android:animation="@anim/morph_equalizer_reverse1" />
+    <target
+        android:name="switch2"
+        android:animation="@anim/morph_equalizer_reverse2" />
+    <target
+        android:name="switch3"
+        android:animation="@anim/morph_equalizer_reverse3" />
+</animated-vector>
