@@ -1,0 +1,66 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+
+    <aapt:attr name="android:drawable">
+        <vector android:height="100dp" android:viewportHeight="64.0"
+            android:viewportWidth="64.0" android:width="100dp" >
+
+            <path android:fillColor="#00000000"
+                android:pathData="M59.13,32A27.06,27 0,1 1,5 32,27.06 27,0 1,1 59.13,32z"
+                android:strokeColor="@color/gray" android:strokeWidth="5"/>
+
+            <group android:name="long"
+                android:pivotX="32.0"
+                android:pivotY="32.0">
+
+                <path
+                    android:fillColor="#00000000"
+                    android:pathData="m32.06,32 l0,-17.65"
+                    android:strokeColor="@color/gray" android:strokeLineCap="square" android:strokeWidth="5"/>
+
+            </group>
+
+            <group android:name="short"
+                android:pivotX="32.0"
+                android:pivotY="32.0">
+
+                <path
+                    android:fillColor="#00000000"
+                    android:pathData="m45.56,31.84 l-13.34,0"
+                    android:strokeColor="@color/gray" android:strokeLineCap="square" android:strokeWidth="5"/>
+
+            </group>
+
+        </vector>
+    </aapt:attr>
+
+    <target android:name="long">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:duration="@integer/animate_duration"
+                android:propertyName="rotation"
+                android:valueFrom="1080"
+                android:valueTo="0" />
+
+        </aapt:attr>
+
+    </target>
+
+
+    <target android:name="short">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:duration="@integer/animate_duration"
+                android:propertyName="rotation"
+                android:valueFrom="90"
+                android:valueTo="0" />
+
+        </aapt:attr>
+
+    </target>
+
+</animated-vector>
