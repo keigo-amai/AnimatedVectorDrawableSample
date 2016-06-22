@@ -53,9 +53,11 @@ public class AnimationButton extends Button implements View.OnClickListener {
 
             String stateResName = view.isSelected() ? mResName + REVERSE_SUFFIX : mResName;
             int drawableResId = getResources().getIdentifier(stateResName, "drawable", getContext().getPackageName());
-            view.setBackground(getContext().getDrawable(drawableResId));
+            if (drawableResId != 0) {
+                view.setBackground(getContext().getDrawable(drawableResId));
+                drawable = view.getBackground();
+            }
 
-            drawable = view.getBackground();
             ((AnimatedVectorDrawable) drawable).start();
 
             view.setSelected(!view.isSelected());

@@ -41,6 +41,13 @@
             android:background="@drawable/animated_clock"
             app:ResourceName="animated_clock"/>
 
+        <com.amadroid.vectoranimationsample.view.AnimationButton
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/animated_square_vector"
+            app:ResourceName="animated_square_vector"/>
+
     </LinearLayout>
 
 </ScrollView>
