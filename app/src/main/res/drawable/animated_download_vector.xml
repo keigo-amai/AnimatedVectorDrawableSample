@@ -1,7 +1,111 @@
 <animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
     android:drawable="@drawable/downloaded_vector">
 
-    <target android:name="oval"
-        android:animation="@anim/progress"/>
+    <target android:name="vertical">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="200"
+                android:valueFrom="M82.5,119L82.5,46"
+                android:valueTo="M82.5,82.5L82.5, 84.5" />
+
+        </aapt:attr>
+
+    </target>
+
+    <target android:name="vertical">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:interpolator="@android:anim/overshoot_interpolator"
+                android:startOffset="200"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="200"
+                android:valueFrom="M82.5,82.5L82.5, 83.5"
+                android:valueTo="M82.5,7 L82.5, 9"/>
+
+        </aapt:attr>
+    </target>
+
+    <target android:name="vertical">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="400"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="0"
+                android:valueFrom="M82.5,7 L82.5, 9"
+                android:valueTo="M82.5,9 L82.5, 9"/>
+
+        </aapt:attr>
+    </target>
+
+    <target android:name="down_arrow">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="200"
+                android:valueFrom="M51,83 L82.42,120L115,83"
+                android:valueTo="M32,83 L82.42,83 L133,83"/>
+
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="oval">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="300"
+                android:duration="2200"
+                android:valueType="floatType"
+                android:propertyName="trimPathEnd"
+                android:valueFrom="0"
+                android:valueTo="1" />
+
+        </aapt:attr>
+    </target>
+
+    <target android:name="oval">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="200"
+                android:duration="0"
+                android:valueType="floatType"
+                android:propertyName="strokeColor"
+                android:valueFrom="#00000000"
+                android:valueTo="@color/gray" />
+
+        </aapt:attr>
+    </target>
+
+    <target android:name="down_arrow">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="2500"
+                android:duration="200"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:valueFrom="M32,83 l40,0 l51,0"
+                android:valueTo="M53,85.43l19.73,17.57l40.27,-40"/>
+
+        </aapt:attr>
+    </target>
 
 </animated-vector>
