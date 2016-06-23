@@ -14,34 +14,34 @@
         android:paddingRight="@dimen/activity_horizontal_margin">
 
 
-        <com.amadroid.vectoranimationsample.view.AnimationButton
+        <com.amadroid.vectoranimationsample.view.ReversibleAnimationButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/fill_in_heart"
             app:ResourceName="fill_in_heart"/>
 
 
-        <com.amadroid.vectoranimationsample.view.AnimationButton
+        <com.amadroid.vectoranimationsample.view.ReversibleAnimationButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/animated_equalizer_vector"
             app:ResourceName="animated_equalizer_vector"/>
 
 
-        <com.amadroid.vectoranimationsample.view.AnimationButton
+        <com.amadroid.vectoranimationsample.view.ReversibleAnimationButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/animated_nav_arrow"
             app:ResourceName="animated_nav_arrow"/>
 
 
-        <com.amadroid.vectoranimationsample.view.AnimationButton
+        <com.amadroid.vectoranimationsample.view.ReversibleAnimationButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/animated_clock"
             app:ResourceName="animated_clock"/>
 
-        <com.amadroid.vectoranimationsample.view.AnimationButton
+        <com.amadroid.vectoranimationsample.view.ReversibleAnimationButton
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

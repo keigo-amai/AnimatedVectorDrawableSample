@@ -16,29 +16,29 @@ import com.amadroid.vectoranimationsample.R;
  *
  * Created by Keigo Amai on 2016/06/20.
  */
-public class AnimationButton extends Button implements View.OnClickListener {
+public class ReversibleAnimationButton extends Button implements View.OnClickListener {
 
     private static final String REVERSE_SUFFIX = "_reverse";
     private String mResName;
 
-    public AnimationButton(Context context, AttributeSet attrs, int defStyleAttr) {
+    public ReversibleAnimationButton(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         setOnClickListener(this);
 
         TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
-                R.styleable.AnimationButton,
+                R.styleable.ReversibleAnimationButton,
                 0, 0);
 
         try {
-            mResName = a.getString(R.styleable.AnimationButton_ResourceName);
+            mResName = a.getString(R.styleable.ReversibleAnimationButton_ResourceName);
         } finally {
             a.recycle();
         }
     }
 
-    public AnimationButton(Context context, AttributeSet attrs) {
+    public ReversibleAnimationButton(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 

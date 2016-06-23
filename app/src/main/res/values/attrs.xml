@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="AnimationButton">
+    <declare-styleable name="ReversibleAnimationButton">
         <attr name="ResourceName" format="string"/>
     </declare-styleable>
 </resources>
