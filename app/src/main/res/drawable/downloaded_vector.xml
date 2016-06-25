@@ -35,6 +35,14 @@
         <!--android:strokeWidth="4" />-->
 
         <path
+            android:name="horizontal"
+            android:fillColor="#00000000"
+            android:pathData="M31,83C44,83 44,83 44,83C57,83 57,83 57,83 C70,83 70,83 70,83C83,83 83,83 83,83 C96,83 96,83 96,83C103,83 103,83 103,83C109,83 109,83 109,83C115,83 116,83 117,83C121,83 122,83 123,83C128,83 129,83 130,83C 134,83 135,83 136,83"
+            android:strokeColor="#00000000"
+            android:strokeLineCap="round"
+            android:strokeWidth="4" />
+
+        <path
             android:name="down_arrow"
             android:fillColor="#00000000"
             android:pathData="M51,83L82.42,120L115,83"

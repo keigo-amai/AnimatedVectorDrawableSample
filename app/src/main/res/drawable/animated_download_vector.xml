@@ -6,48 +6,39 @@
 
         <aapt:attr name="android:animation">
 
-            <objectAnimator
-                android:propertyName="pathData"
-                android:valueType="pathType"
-                android:duration="200"
-                android:valueFrom="M82.5,119L82.5,46"
-                android:valueTo="M82.5,82.5L82.5, 84.5" />
+            <set android:ordering="sequentially">
+
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:valueType="pathType"
+                    android:duration="200"
+                    android:valueFrom="M82.5,119L82.5,46"
+                    android:valueTo="M82.5,82.5L82.5, 84.5" />
+
+                <objectAnimator
+                    android:interpolator="@android:anim/overshoot_interpolator"
+                    android:propertyName="pathData"
+                    android:valueType="pathType"
+                    android:duration="200"
+                    android:valueFrom="M82.5,82.5L82.5, 83.5"
+                    android:valueTo="M82.5,7 L82.5, 9"/>
+
+                <objectAnimator
+                    android:propertyName="pathData"
+                    android:valueType="pathType"
+                    android:duration="0"
+                    android:valueFrom="M82.5,7 L82.5, 9"
+                    android:valueTo="M82.5,9 L82.5, 9"/>
+
+            </set>
 
         </aapt:attr>
 
     </target>
 
-    <target android:name="vertical">
+    <!-- 矢印, 水平棒, 波1, 波2, 波3...., 波4, 水平棒 -->
 
-        <aapt:attr name="android:animation">
-
-            <objectAnimator
-                android:interpolator="@android:anim/overshoot_interpolator"
-                android:startOffset="200"
-                android:propertyName="pathData"
-                android:valueType="pathType"
-                android:duration="200"
-                android:valueFrom="M82.5,82.5L82.5, 83.5"
-                android:valueTo="M82.5,7 L82.5, 9"/>
-
-        </aapt:attr>
-    </target>
-
-    <target android:name="vertical">
-
-        <aapt:attr name="android:animation">
-
-            <objectAnimator
-                android:startOffset="400"
-                android:propertyName="pathData"
-                android:valueType="pathType"
-                android:duration="0"
-                android:valueFrom="M82.5,7 L82.5, 9"
-                android:valueTo="M82.5,9 L82.5, 9"/>
-
-        </aapt:attr>
-    </target>
-
+    <!-- 矢印, 水平棒 -->
     <target android:name="down_arrow">
 
         <aapt:attr name="android:animation">
@@ -63,27 +54,139 @@
     </target>
 
 
-    <target android:name="oval">
+    <target android:name="down_arrow">
 
         <aapt:attr name="android:animation">
 
             <objectAnimator
                 android:startOffset="300"
-                android:duration="2200"
+                android:duration="0"
                 android:valueType="floatType"
-                android:propertyName="trimPathEnd"
-                android:valueFrom="0"
-                android:valueTo="1" />
+                android:propertyName="strokeColor"
+                android:valueFrom="@color/gray"
+                android:valueTo="#00000000" />
 
         </aapt:attr>
     </target>
 
-    <target android:name="oval">
+
+    <!--&lt;!&ndash; 水平棒, 波1 &ndash;&gt;-->
+
+    <target android:name="horizontal">
 
         <aapt:attr name="android:animation">
 
             <objectAnimator
-                android:startOffset="200"
+                android:startOffset="300"
+                android:duration="0"
+                android:valueType="floatType"
+                android:propertyName="strokeColor"
+                android:valueFrom="#00000000"
+                android:valueTo="@color/gray" />
+
+        </aapt:attr>
+    </target>
+    <target android:name="horizontal">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="300"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="200"
+                android:valueFrom="M31,83C44,83 44,83 44,83C57,83 57,83 57,83 C70,83 70,83 70,83C83,83 83,83 83,83 C96,83 96,83 96,83C103,83 103,83 103,83C109,83 109,83 109,83C115,83 116,83 117,83C121,83 122,83 123,83C128,83 129,83 130,83C 134,83 135,83 136,83"
+                android:valueTo="M33,83C33,83 38.14,83.58 47,83C49.92,82.81 53.35,81.04 57,81C59.86,80.97 63.85,83.07 67,83C69.13,82.95 71.78,81.02 74,81C76.97,80.98 80.45,85.13 83.5,85C87.08,84.85 90.4,78.04 94,78C96.01,77.98 100.03,85.05 102,85C104.46,84.94 106.63,78.02 109,78C111.88,77.98 114.33,87.1 117,87C120.3,86.88 124.14,78 127,78C 133,78 133,78 133,78" />
+
+        </aapt:attr>
+    </target>
+
+    <!-- 波2, 波3 -->
+    <target android:name="horizontal">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="500"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="200"
+                android:valueFrom="M33,83C33,83 38.14,83.58 47,83C49.92,82.81 53.35,81.04 57,81C59.86,80.97 63.85,83.07 67,83C69.13,82.95 71.78,81.02 74,81C76.97,80.98 80.45,85.13 83.5,85C87.08,84.85 90.4,78.04 94,78C96.01,77.98 100.03,85.05 102,85C104.46,84.94 106.63,78.02 109,78C111.88,77.98 114.33,87.1 117,87C120.3,86.88 124.14,78 127,78C 133,78 133,78 133,78"
+                android:valueTo="M32,82C32,82 35.98,86 40.98,88C45.98,90 47.32,79.04 50.98,79C53.83,78.97 57.82,88.07 60.98,88C63.1,87.95 67.76,77.02 69.98,77C72.95,76.97 77.92,84.13 80.98,84C84.56,83.85 86.38,79.04 89.98,79C91.99,78.97 99.01,86.05 100.98,86C103.44,85.94 108.61,77.02 110.98,77C113.86,76.98 116.31,86.1 118.98,86C122.27,85.88 124.12,79 126.98,79C129.45,79 132.98,84 132.98,84"/>
+
+        </aapt:attr>
+    </target>
+
+    <!-- 波3, 波4 -->
+    <target android:name="horizontal">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="700"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:repeatCount="7"
+                android:duration="200"
+                android:valueFrom="M32,82C32,82 35.98,86 40.98,88C45.98,90 47.32,79.04 50.98,79C53.83,78.97 57.82,88.07 60.98,88C63.1,87.95 67.76,77.02 69.98,77C72.95,76.97 77.92,84.13 80.98,84C84.56,83.85 86.38,79.04 89.98,79C91.99,78.97 99.01,86.05 100.98,86C103.44,85.94 108.61,77.02 110.98,77C113.86,76.98 116.31,86.1 118.98,86C122.27,85.88 124.12,79 126.98,79C129.45,79 132.98,84 132.98,84"
+                android:valueTo="M32.02,85C32.02,85 31.16,78.59 40.02,78C42.95,77.81 47.37,87.04 51.02,87C53.88,86.97 58.87,80.07 62.02,80C64.15,79.96 69.81,87.02 72.02,87C74.99,86.98 76.97,80.13 80.02,80C83.6,79.85 85.42,87.04 89.02,87C91.03,86.98 97.05,78.05 99.02,78C101.49,77.94 108.66,85.02 111.02,85C113.9,84.98 114.35,80.1 117.02,80C120.32,79.88 124.17,85 127.02,85C129.49,85 133.02,80 133.02,80"/>
+
+        </aapt:attr>
+    </target>
+
+
+    <!-- 波4, 水平棒 -->
+    <target android:name="horizontal">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="2100"
+                android:propertyName="pathData"
+                android:valueType="pathType"
+                android:duration="300"
+                android:valueFrom="M32.02,85C32.02,85 31.16,78.59 40.02,78C42.95,77.81 47.37,87.04 51.02,87C53.88,86.97 58.87,80.07 62.02,80C64.15,79.96 69.81,87.02 72.02,87C74.99,86.98 76.97,80.13 80.02,80C83.6,79.85 85.42,87.04 89.02,87C91.03,86.98 97.05,78.05 99.02,78C101.49,77.94 108.66,85.02 111.02,85C113.9,84.98 114.35,80.1 117.02,80C120.32,79.88 124.17,85 127.02,85C129.49,85 133.02,80 133.02,80"
+                android:valueTo="M31,83C44,83 44,83 44,83C57,83 57,83 57,83 C70,83 70,83 70,83C83,83 83,83 83,83 C96,83 96,83 96,83C103,83 103,83 103,83C109,83 109,83 109,83C115,83 116,83 117,83C121,83 122,83 123,83C128,83 129,83 130,83C 134,83 135,83 136,83"/>
+
+        </aapt:attr>
+    </target>
+
+
+    <!-- 弧が丸になっていく -->
+    <target android:name="oval">
+
+        <aapt:attr name="android:animation">
+
+
+            <set android:ordering="sequentially">
+
+                <objectAnimator
+                    android:startOffset="200"
+                    android:duration="0"
+                    android:valueType="floatType"
+                    android:propertyName="strokeColor"
+                    android:valueFrom="#00000000"
+                    android:valueTo="@color/gray" />
+
+                <objectAnimator
+                    android:startOffset="100"
+                    android:duration="2000"
+                    android:valueType="floatType"
+                    android:propertyName="trimPathEnd"
+                    android:valueFrom="0"
+                    android:valueTo="1" />
+            </set>
+
+        </aapt:attr>
+    </target>
+
+
+    <target android:name="down_arrow">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="2300"
                 android:duration="0"
                 android:valueType="floatType"
                 android:propertyName="strokeColor"
@@ -93,12 +196,30 @@
         </aapt:attr>
     </target>
 
+
+    <!-- 水平棒, 波1 -->
+
+    <target android:name="horizontal">
+
+        <aapt:attr name="android:animation">
+
+            <objectAnimator
+                android:startOffset="2300"
+                android:duration="0"
+                android:valueType="floatType"
+                android:propertyName="strokeColor"
+                android:valueFrom="@color/gray"
+                android:valueTo="#00000000" />
+
+        </aapt:attr>
+    </target>
+
     <target android:name="down_arrow">
 
         <aapt:attr name="android:animation">
 
             <objectAnimator
-                android:startOffset="2500"
+                android:startOffset="2300"
                 android:duration="200"
                 android:propertyName="pathData"
                 android:valueType="pathType"

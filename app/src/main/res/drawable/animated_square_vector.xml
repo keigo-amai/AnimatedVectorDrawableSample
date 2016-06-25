@@ -20,7 +20,7 @@
         <aapt:attr name="android:animation">
             <objectAnimator
                 android:duration="@integer/animate_duration"
-                android:repeatCount="10"
+                android:repeatCount="3"
                 android:valueType="floatType"
                 android:propertyName="trimPathEnd"
                 android:valueFrom="0"
